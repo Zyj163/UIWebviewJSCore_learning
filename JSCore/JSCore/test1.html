@@ -1,0 +1,16 @@
+<html>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport">
+        <body>
+            
+            <div class='label' style='background: red; color: white'>根据颜色查看结果</div>
+            
+            <script type="text/javascript">
+                //如果是匿名函数，需要将函数赋值给一个变量才能让外部接收
+                function nativeCallJS(color) {
+                    document.getElementsByClassName('label')[0].style.background = color;
+                }
+            </script>
+            <button type="button" onclick = "jsCallNative('jsParameter')" style="width:100%; height:30px;"/>调用OC代码</button>
+        </body>
+</html>

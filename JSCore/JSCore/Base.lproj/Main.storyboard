@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6Jd-hW-Xb8">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web View Controller-->
+        <scene sceneID="87c-r1-dVl">
+            <objects>
+                <viewController id="X1Q-2n-PxQ" customClass="WKWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1qX-Fo-2yQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="LcA-SV-PSm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QDU-Eh-hgw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dKR-08-wn1">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" id="9sO-Rh-QbF"/>
+                            <barButtonItem title="Item" id="O12-if-qM1"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UsU-cs-78i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630" y="-518"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iXC-3b-q7W">
+                        <rightBarButtonItems>
+                            <barButtonItem title="test1" id="9Tp-kb-Ze0">
+                                <connections>
+                                    <segue destination="LBT-sD-6lu" kind="show" id="fJQ-Tk-1Cj"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="test2" id="mUT-Hd-uPT">
+                                <connections>
+                                    <segue destination="acU-cP-JNf" kind="show" id="LRF-32-0eZ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="test3" id="f72-Y4-Vj6">
+                                <connections>
+                                    <segue destination="X1Q-2n-PxQ" kind="show" id="dcX-GT-FNA"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="124"/>
+        </scene>
+        <!--Test2UI Web View Controller-->
+        <scene sceneID="esV-3b-lv7">
+            <objects>
+                <viewController id="acU-cP-JNf" customClass="Test2UIWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Gy-gB-oeq"/>
+                        <viewControllerLayoutGuide type="bottom" id="sAP-9Y-0h0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="670-1a-neK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8vn-sP-OxL">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8vn-sP-OxL" firstAttribute="leading" secondItem="670-1a-neK" secondAttribute="leading" id="R5l-Hg-q5x"/>
+                            <constraint firstAttribute="trailing" secondItem="8vn-sP-OxL" secondAttribute="trailing" id="aoK-zz-oJH"/>
+                            <constraint firstItem="sAP-9Y-0h0" firstAttribute="top" secondItem="8vn-sP-OxL" secondAttribute="bottom" id="yIE-K7-Uwg"/>
+                            <constraint firstItem="8vn-sP-OxL" firstAttribute="top" secondItem="6Gy-gB-oeq" secondAttribute="bottom" id="zq1-1S-ugw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="p3R-fd-aHd">
+                        <barButtonItem key="rightBarButtonItem" title="调用JS" id="btg-oD-fnT">
+                            <connections>
+                                <action selector="callJS:" destination="acU-cP-JNf" id="oMA-9Q-8W8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webview" destination="8vn-sP-OxL" id="KfJ-Dq-bDM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="11C-m8-olB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1279" y="124"/>
+        </scene>
+        <!--Test1UI Web View Controller-->
+        <scene sceneID="u02-n5-x3t">
+            <objects>
+                <viewController id="LBT-sD-6lu" customClass="Test1UIWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Plw-Pr-7lW"/>
+                        <viewControllerLayoutGuide type="bottom" id="EaG-hq-2a4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2K0-Uu-Pi1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oJ4-PH-fLL">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oJ4-PH-fLL" firstAttribute="leading" secondItem="2K0-Uu-Pi1" secondAttribute="leading" id="9c5-Iu-aDg"/>
+                            <constraint firstItem="oJ4-PH-fLL" firstAttribute="top" secondItem="Plw-Pr-7lW" secondAttribute="bottom" id="Qtt-nN-DDX"/>
+                            <constraint firstAttribute="trailing" secondItem="oJ4-PH-fLL" secondAttribute="trailing" id="Ucg-ba-Hfq"/>
+                            <constraint firstItem="EaG-hq-2a4" firstAttribute="top" secondItem="oJ4-PH-fLL" secondAttribute="bottom" id="gIr-ZI-3Fl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9xY-ct-gnU">
+                        <barButtonItem key="rightBarButtonItem" title="调用js" id="oMD-9r-b8A">
+                            <connections>
+                                <action selector="callJS:" destination="LBT-sD-6lu" id="Kf2-oL-tlc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webview" destination="oJ4-PH-fLL" id="PSW-Ut-WYO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BJS-3H-tYJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630" y="783"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fe0-DO-1rg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Jd-hW-Xb8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AYe-9f-GSM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="h9v-QZ-Mam"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mW2-ef-cmO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-81" y="124"/>
+        </scene>
+    </scenes>
+</document>
